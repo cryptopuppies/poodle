@@ -10,10 +10,12 @@ contract('Puppies', function(accounts){
 
         console.log(0)
 
-        var instance = await Puppies.deployed();
+        let instance = await Puppies.deployed();
 
-        var puppies = instance.puppies.call(accounts[0])
-        console.log('puppies:', puppies);
+        let puppies = await instance.getCountofPuppies.call();
+
+        console.log('puppies:', puppies.toString());
+
     });
 
 

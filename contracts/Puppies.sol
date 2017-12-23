@@ -14,6 +14,10 @@ contract Puppies {
 
   Puppy[] public puppies;
 
+  function getPuppy(uint n) public constant returns (bytes32, uint ) {
+        return (puppies[n].name, puppies[n].dna);
+    }
+
   function _createPuppy(bytes32 _name, uint _dna) private {
     uint id = puppies.push(Puppy(_name, _dna));
     PuppyCreated(id, _name, _dna);
@@ -31,6 +35,10 @@ contract Puppies {
 
   function getPuppies() public view returns (Puppy[]){
     return puppies;
+  }
+
+  function getCountofPuppies() public view returns (uint256) {
+    return puppies.length;
   }
 
 }
