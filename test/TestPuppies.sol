@@ -19,14 +19,13 @@ contract TestPuppies {
     p.createRandomPuppy(name);
 
 
-    Assert.notEqual(p.getCountofPuppies(),0, 'should not be empty');
+    Assert.notEqual(p.getCountOfPuppies(), 0, 'should not be empty');
     bytes32 newName;
     uint256 newDna;
-    (newName ,newDna) = p.getPuppy(0);
-    Assert.equal(newName,"puppy1", 'should be puppy1');
+    (newName, newDna) = p.getPuppy(0);
+    Assert.equal(newName, "puppy1", 'should be puppy1');
 
   }
-
 
 
 }

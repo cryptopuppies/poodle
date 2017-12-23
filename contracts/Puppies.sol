@@ -37,7 +37,7 @@ contract Puppies {
     return puppies;
   }
 
-  function getCountofPuppies() public view returns (uint256) {
+  function getCountOfPuppies() public view returns (uint256) {
     return puppies.length;
   }
 
